@@ -1,0 +1,173 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/lib/w3.css">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>基本資料</title>
+</head>
+
+<style>
+    .center {
+        text-align: center;
+    }
+</style>
+<style>
+    body {
+        font-family: Microsoft JhengHei;
+        ;
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        /* 5px rounded corners */
+    }
+
+    /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+</style>
+
+<style>
+    .mySlides {
+        display: none
+    }
+
+    .w3-left,
+    .w3-right,
+    .w3-badge {
+        cursor: pointer
+    }
+
+    .w3-badge {
+        height: 13px;
+        width: 13px;
+        padding: 0
+    }
+</style>
+
+<body class="w3-container" bgcolor="#FFE5B4">
+
+    <h1 div class="center">
+        關於我(聖焙)
+    </h1 div>
+
+    <div class="w3-responsive">
+        <table class="w3-table w3-striped w3-bordered w3-border">
+
+            <tr>
+                <th><a href="home.html" class="booksbox"><img class="bimg" style="float:left;" src="home (2).png"
+                            width="100" alt="..."></th>
+                <th><b> 👈可以點選喔(返回首頁) </b></td></a>
+                <th><img class="bimg" style="float:left;" src="bg.png" width="100" alt="..."></th>
+                <th>
+                    </td>
+                <th><img class="bimg" style="float:left;" src="bg.png" width="100" alt="..."></th>
+                <th>
+                    </td>
+                <th><img class="bimg" style="float:left;" src="bg.png" width="100" alt="..."></th>
+                <th>
+                    </td>
+                <th><img class="bimg" style="float:left;" src="bg.png" width="100" alt="..."></th>
+                <th>
+                    </td>
+                <th><img class="bimg" style="float:left;" src="bg.png" width="100" alt="..."></th>
+                <th>
+                    </td>
+                <th><img class="bimg" style="float:left;" src="bg.png" width="100" alt="..."></th>
+                <th>
+                    </td>
+
+                <th><a href="index.html" class="booksbox"><img class="bimg" style="float:left;" src="top.png"
+                            width="200" alt="..."></th>
+                <th><b> 👈可以點選喔(返回基本資料) </b></td></a>
+            </tr>
+
+        </table>
+    </div>
+
+    <h1 div class="center">
+        👇 👇我是聖焙👇 👇
+    </h1 div>
+    <h1 div class="center">
+        <img class="bimg" style="float:left;" src="banana.jpg" width="100%" alt="...">
+    </h1 div>
+
+
+    <h1 div class="center">
+        👇 👇 京阿尼(平常的休閒依賴著日本動畫撫慰心靈)👇 👇
+    </h1 div>
+
+    <h1 div class="center">
+        (1) K-on (2) New-Game (3) 龍王的工作
+    </h1 div>
+
+    <div class="w3-content w3-display-container" style="max-width:100%">
+        <img class="mySlides" src="k-on.jpg" style="width:100%">
+        <img class="mySlides" src="new game.jpg" style="width:100%">
+        <img class="mySlides" src="龍王的工作.jpg" style="width:100%">
+        <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+            <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+
+    <h1 div class="center">
+        謝謝大家這是我的日常~
+    </h1 div>
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
+    </script>
+
+
+</body>
+
+</html>
